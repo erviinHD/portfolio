@@ -1,0 +1,23 @@
+.genesis-nav-menu {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    padding: 5px;
+    color: linear-gradient(currentColor, currentColor);
+}
+
+.genesis-nav-menu:hover,
+.genesis-nav-menu:focus {
+    background-size: 100% 2px;
+}
+
+.active{
+    color: rgb(2, 2, 26);
+    font-weight: bold;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 2px;
+
+}

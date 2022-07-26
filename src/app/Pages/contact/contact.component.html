@@ -1,0 +1,95 @@
+<!-- Section 1 -->
+<section class="relative h-auto bg-white">
+  <div class="mx-auto max-w-7xl">
+
+    <div class="flex flex-col lg:flex-row">
+
+      <div class="w-full bg-white lg:w-7/12 xl:w-7/12">
+
+        <div class="flex flex-col items-start justify-start w-full h-full p-10 lg:p-16 xl:p-24">
+
+          <h1
+            class="text-5xl font-extrabold leading-none max-w-5xl tracking-normal text-gray-900 sm:text-5xl md:text-5xl lg:text-6xl md:tracking-tight mb-5">
+            <span
+              class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 ">Contáctame</span>
+          </h1>
+          <p class="px-0 mt-3 text-md text-gray-600 md:text-md"> Estoy interesado en oportunidades independientes,
+            especialmente proyectos ambiciosos o
+            grandes. Sin embargo, si tienes otra solicitud o pregunta, no dudes en utilizar el formulario. </p>
+          <div class="relative w-full mt-10 space-y-8">
+            <form form [formGroup]="userForm">
+                <div class="grid gap-6 sm:grid-cols-2">
+              <div class="relative z-0 col-span-2 xl:col-span-1 lg:col-span-1">
+                <label class="font-medium text-gray-900">Nombre</label>
+                <input type="text" formControlName="nombre" 
+                  class="peer block w-full appearance-none border-0 border-b-2 border-gray-700 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  placeholder="Ingresa tu nombre">
+              </div>
+              <div class="relative z-0 col-span-2 xl:col-span-1 lg:col-span-1">
+                <label class="font-medium text-gray-900">Correo</label>
+                <input type="text" formControlName="email" 
+                  class="peer block w-full appearance-none border-0 border-b-2 border-gray-700 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  placeholder="Ingresa tu correo">
+              </div>
+              <div class="relative z-0 col-span-2 xl:col-span-1 lg:col-span-1">
+                <label class="font-medium text-gray-900">Asunto</label>
+                <input type="text" formControlName="asunto" 
+                  class="peer block w-full appearance-none border-0 border-b-2 border-gray-700 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  placeholder="Ingresa un asunto">
+              </div>
+              <div class="relative z-0 col-span-2 xl:col-span-1 lg:col-span-1 ">
+                <label class="font-medium text-gray-900">Teléfono</label>
+                <input type="tel" formControlName="telefono" 
+                  class="peer block w-full appearance-none border-0 border-b-2 border-gray-700 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  placeholder="Ingresa un número telefónico">
+              </div>
+              <div class="relative z-0 col-span-2">
+                <label class="font-medium text-gray-900">Mensaje</label>
+                <textarea type="text" rows="5" formControlName="mensaje" 
+                  class="peer block w-full appearance-none border-0 border-b-2 border-gray-700 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  placeholder="Ingresa un mensaje"></textarea>
+              </div>
+              <div class="relative">
+                <a (click)="sendEmail()"
+                  class="ov-btn-slide-left inline-block w-full px-5 py-4 text-xl font-medium text-center text-white transition duration-200  rounded-lg ease font-bold">Enviar</a>
+              </div>
+            </div>
+            </form>
+          
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full bg-cover lg:w-5/12 xl:w-5/12 pt-5 ">
+        <div class="absolute px-10 pt-10">
+          <div class="flex flex-col p-5 bg-gray-800 shadow-md hover:shodow-lg rounded-xl opacity-95">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <div class="flex flex-col ml-3">
+                  <div class="font-medium leading-none text-gray-100">Ervin Cabascango</div>
+                  <h1 class="text-sm text-gray-300 leading-none mt-3">
+                    <span
+                      class=" w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 ">»:
+                    </span>
+                    Ibarra - Ecuador
+                  </h1>
+                  <h1 class="text-sm text-gray-300 leading-none mt-3">
+                    <span
+                      class="w-full text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 ">@:</span>
+                    ervin.cabascango.s@gmail.com
+                  </h1>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <img src="https://objects-us-east-1.dream.io/mappin2/d68ad99866477a6aa3aa156eb73f7ef9999e2f8a"
+          class=" rounded-xl ">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
