@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { AlertsService } from 'src/app/Services/alerts.service';
 import { LoginService } from 'src/app/Services/login.service';
 
 @Component({
@@ -11,7 +12,9 @@ import { LoginService } from 'src/app/Services/login.service';
 export class ContactComponent implements OnInit {
   userForm: FormGroup = new FormGroup({});
   subscriptions: Subscription[] = [];
-  constructor(private fb: FormBuilder,
+  constructor(
+    private fb: FormBuilder,
+    private _alerts: AlertsService,
     private _login: LoginService
   ) { }
 
@@ -30,15 +33,21 @@ export class ContactComponent implements OnInit {
   }
 
   async sendEmail() {
+
     if (!this.userForm.valid) {
+      this._alerts.sweetAletGenericWarning(
+        'Campos inválidos', 'Asegúrate de llenar la toda información necesaria'
+      )
       return
     } else {
       const subCreate = this._login.sendEmail(this.userForm.value).subscribe({
         next: () => {
-          console.log('ok');
+          this._alerts.sweetAletGenericSuccess(
+            'Mensaje Enviado', 'Gracias por enviarme un mensaje, pronto me contactaré contigo'
+          )
         },
         error: (err: any) => {
-          console.log(err);
+      
         }
       })
       this.subscriptions.push(subCreate);
